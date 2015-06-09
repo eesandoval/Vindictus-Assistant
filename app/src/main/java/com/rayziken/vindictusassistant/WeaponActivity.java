@@ -110,7 +110,7 @@ public class WeaponActivity extends ActionBarActivity {
         int currentIndex = 0;
         currentIndex++;
 
-        name.setText(cursor.getString(currentIndex++));
+        name.setText(resizeString(cursor.getString(currentIndex++)));
         level.setText(cursor.getInt(currentIndex++) + "");
         rank.setText(cursor.getInt(currentIndex++) + "");
         attack.setText(cursor.getInt(currentIndex++) + "");
@@ -187,5 +187,15 @@ public class WeaponActivity extends ActionBarActivity {
         item7Quantity.setText(cursor.getInt(currentIndex) + "");
 
         cursor.close();
+    }
+
+    private String resizeString(String s) {
+        String result = s;
+        if (result.length() > 20) {
+            result = result.replaceFirst(" ", "\n");
+            result = result.replaceFirst(" ", "\n");
+            result = result.replaceFirst("\n", " ");
+        }
+        return result;
     }
 }

@@ -27,7 +27,7 @@ public class WeaponCategoryList extends Fragment {
     }
 
     private void populateListView() {
-        String[] weaponItems = {"Twins Swords", "Twin Spears", "Longswords", "Long Hammers",
+        String[] weaponItems = {"Twin Swords", "Twin Spears", "Longswords", "Long Hammers",
                                 "Battle Scythes", "Staves", "Pillars", "Cestuses",
                                 "Bows", "Cross Guns", "Twin Chainblades", "Greatswords",
                                 "Glaives", "Spellswords"};
