@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Vindictus Assistant</string>
+
+    <string name="main_menu_title">Main Menu</string>
+    <string name="cromm_timer_title">Cromm Timer</string>
+    <string name="weapons_title">Weapons</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="disclaimer">Vindictus And All Respective Names and Images are Trademark of © NEXON Korea Corp. and devCAT 2015</string>
+
+    <string name="developed_by">Developed by Rayziken</string>
+
+    <string name="vindictus_logo_description">Vindictus Logo by NEXON Korea Corp.</string>
+    <string name="title_activity_weapon_list">weapon_list</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="app_label">Vindictus Assistant</string>
+    <string name="search_title">Weapon Name</string>
+    <string name="title_activity_weapon">WeaponActivity</string>
+</resources>

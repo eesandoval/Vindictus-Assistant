@@ -1,0 +1,524 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.rayziken.vindictusassistant.WeaponActivity">
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/weaponTabHost"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/weaponTabDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Name:"
+                            android:textColor="#252525"
+                            android:textStyle="bold"
+                            android:id="@+id/weaponDetailsNameText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Black Hammer Glaive"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:textStyle="bold"
+                            android:id="@+id/weaponDetailsName"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Level:"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsLevelText"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="80"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsLevel"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Rank:"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsRankText"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="9"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsRank"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Attack:"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsAttackText"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="6,420"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsAttack"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Magic Attack:"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsMAttackText"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsMAttack"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Balance:"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsBalanceText"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="80"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsBalance"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Critical:"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsCriticalText"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="32"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsCritical"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Speed:"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsSpeedText"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsSpeed"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Strength:"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsStrengthText"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="76"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsStrength"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Agility:"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsAgilityText"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsAgility"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Intelligence:"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsIntelligenceText"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsIntelligence"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Willpower:"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsWillpowerText"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="47"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponDetailsWillpower"
+                            android:layout_column="1" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/weaponTabCraft"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem1Name"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem1Quantity"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem2Name"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem2Quantity"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem3Name"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem3Quantity"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem4Name"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem4Quantity"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem5Name"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem5Quantity"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem6Name"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem6Quantity"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem7Name"
+                            android:layout_column="0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text=""
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="#252525"
+                            android:id="@+id/weaponCraftItem7Quantity"
+                            android:layout_column="1" />
+                    </TableRow>
+                </TableLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</RelativeLayout>
