@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CrommTimer extends Fragment {
     View rootview;
@@ -19,6 +20,7 @@ public class CrommTimer extends Fragment {
     Button stopTimerButton;
     Button newTimeButton;
     CheckBox underSixBarsCheckBox;
+    UpdateRaidTime raidTimer;
 
     @Nullable
     @Override
@@ -35,7 +37,7 @@ public class CrommTimer extends Fragment {
         statueTimeTextView = (TextView)rootview.findViewById(R.id.statueTime);
         underSixBarsCheckBox = (CheckBox)rootview.findViewById(R.id.underSix);
 
-        final UpdateRaidTime raidTimer = new UpdateRaidTime(3600000, 1000);
+        raidTimer = new UpdateRaidTime(3600000L, 1000L);
         startTimerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +59,10 @@ public class CrommTimer extends Fragment {
                     nextStatueTime -= 30000L;
                 }
                 nextStatueTime -= 120000L;
+                if (nextStatueTime <= 0L) {
+                    statueTimeTextView.setText("0:00");
+                    return;
+                }
                 statueTimeTextView.setText((nextStatueTime / 60000L) + ":");
                 long secondsLeft = ((nextStatueTime / 1000L) % 60L);
                 if (secondsLeft < 10L)
@@ -83,6 +89,7 @@ public class CrommTimer extends Fragment {
             long secondsLeft = ((millisUntilFinished)/1000L) % 60L;
             if (secondsLeft < 10L)
                 raidTimeTextView.append("0");
+            millisUntilDone = millisUntilFinished;
             raidTimeTextView.append(secondsLeft + "");
         }
     }
